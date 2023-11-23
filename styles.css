@@ -1,0 +1,20 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style for the centered text */
+  .centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Centrally aligns vertically */
+  }
+  
+  h2 {
+    color: #000000;
+    text-align: center; /* Centrally aligns horizontally */
+  }
+  

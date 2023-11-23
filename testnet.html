@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web3 Chain xRecodz</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        /* CSS Body */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set tinggi minimum untuk body agar memenuhi seluruh viewport */
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        /* CSS Header */
+        header {
+        border-bottom: 1px solid rgb(0, 0, 0);
+        background-color: rgb(0, 0, 0);
+        margin-bottom: 5px; /* Mengurangi margin bawah */
+        color: rgb(255, 255, 255);
+        padding: 0px 0; /* Mengurangi padding */
+        font-size: 21px;
+    }
+        /* CSS Main */
+        main {
+            flex: 1; /* Bagian main akan menyesuaikan sisa ruang di halaman */
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center; /* Teks di tengah pada elemen main */
+        }
+
+        /* CSS Footer */
+        footer {
+    text-align: center;
+     /* position: absolute;
+    bottom: 0; */
+    border-top: 4px solid rgb(0, 0, 0);
+    margin-top: 50px; /* Jarak atas footer */
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 20px 0; /* Mengurangi padding footer agar lebih rapat */
+    color: rgb(255, 255, 255); /* Mengubah warna teks pada footer */
+}
+
+        .footer-content {
+            margin-bottom: 10px; /* Menambahkan sedikit jarak di bagian bawah konten footer */
+        }
+
+        .footer-links a {
+            color: rgb(255, 255, 255); /* Mengubah warna teks tautan footer */
+            margin: 0 10px; /* Memberikan sedikit jarak antar tautan footer */
+            text-decoration: none;
+        }
+
+            /* CSS LAIN LAIN */
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            padding-top: 15px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .navbar a {
+        text-decoration: none;
+        color: white;
+        margin: 0 20px; /* Mengurangi margin kiri-kanan */
+        font-size: 1em; /* Mengurangi ukuran font */
+    }
+
+        .navbar a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .logo {
+            width: 50px; /* Sesuaikan ukuran logo */
+            height: auto;
+        }
+
+        .about-widget,
+        .skills-widget {
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Container untuk input dan tombol */
+        .search-container {
+            display: flex;
+            justify-content: flex-end; /* Meletakkan konten ke kanan */
+            align-items: center; /* Menyamakan tinggi konten */
+            margin-top: 10px;
+        }
+
+        .search-container input[type="text"],
+        .search-container button {
+            padding: 8px; /* Mengurangi padding */
+            font-size: 12px; /* Mengurangi ukuran font */
+            border-radius: 3px;
+            border: none;
+            margin-left: 8px; /* Memberikan jarak antara input dan tombol */
+            color: rgb(0, 0, 0);
+        }
+
+        .search-container input[type="text"] {
+            width: 200px; /* Sesuaikan lebar input */
+        }
+
+        .search-btn {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-btn:hover {
+            background-color: #ffffff;
+        }
+
+        .button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+/* CSS collection box di main */
+.collection-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.buttons {
+    margin-bottom: 20px;
+}
+
+.collection-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.collection-item {
+    width: 200px;
+    text-align: center;
+}
+
+    /* Class untuk animasi */
+    .animate-on-scroll {
+        opacity: 0; /* Atur elemen menjadi tidak terlihat secara default */
+        transition: opacity 1s ease; /* Animasi opacity selama 1 detik */
+    }
+
+    /* Tambahkan class baru untuk membuat elemen terlihat saat scroll */
+    .show-on-scroll {
+        opacity: 1; /* Set elemen menjadi terlihat */
+    }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar" style="position: left;">
+                <!-- Logo -->
+                <a href="index.html"><img src="logo.png" alt="Logo" style="position: absolute; top: 7px; left: 70px; height: 100px; width: auto;"></a>
+                
+                <!-- Navigation Links -->
+                <a href="#about" style="color: rgb(255, 255, 255); margin-left: 10px; margin-right: 90px; padding-top: 30px; padding-bottom: 10px;">About</a>
+                <a href="#history" style="color: rgb(255, 255, 255); margin-left: 10px; margin-right: 90px; padding-top: 30px; padding-bottom: 10px;">History Project</a>
+                <a href="tutorial.html" style="color: rgb(255, 255, 255); margin-left: 10px; margin-right: 90px; padding-top: 30px; padding-bottom: 10px;">Tutorial</a>
+            </div>
+        </div>
+    </header>
+</body>
+    
+    
+    
+    
+
+    <footer>
+        <div class="footer-content">
+            <span class="footer-text">2023 Made with supporting Cryptocommunity</span>
+        </div>
+        <div class="footer-links">
+            <a target="_blank" rel="nofollow noopener" href="mailto:info@x.guru">Contact</a>
+            <a href="/donate">Donate</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+</html>
